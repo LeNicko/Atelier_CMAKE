@@ -14,4 +14,4 @@ jobs:
           cmake ..
           make
           make test
-          #TEST
+          
