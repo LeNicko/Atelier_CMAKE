@@ -89,3 +89,10 @@ jobs:
           cmake ..
           make
           ./src/calculator car 5          
+  Deploy:
+    runs-on: ubuntu-latest
+    # Ce job attend que TOUS les tests soient finis et réussis
+    needs: [Test_Add, Test_Sub, Test_Mul, Test_Div, Test_Car]
+    steps:
+      - name: Deploiement
+        run: echo "Déploiement de la solution"       
