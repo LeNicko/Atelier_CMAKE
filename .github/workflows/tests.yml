@@ -14,7 +14,8 @@ jobs:
           cmake ..
           make
           make test
-Test_Add:
+    
+  Test_Add:
     runs-on: ubuntu-latest
     needs: Compilation
     steps:
@@ -27,6 +28,5 @@ Test_Add:
           cd build
           cmake ..
           make
-          ./src/calculator add 10 5          
-
-          
+          ./src/calculator add 10 5    
+    
